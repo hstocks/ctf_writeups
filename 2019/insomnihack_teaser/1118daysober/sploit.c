@@ -1,3 +1,8 @@
+/* Exploit for CVE-2015-8966
+ * Compile with `arm-linux-gnueabi-gcc -static sploit.c -o sploit`
+ * Pack rootfs.img up with `find . | cpio -H newc -o  | gzip -9 > rootfs.img`
+ */
+
 #include <errno.h>
 #include <fcntl.h>
 #include <linux/fs.h>
