@@ -10,7 +10,7 @@ Eventually I decided that the latter option seemed like the most likely, and it 
 
 I was able to achieve this by raising an exception and walking up the stack frames until I found the frame containing the reference to `__exit`. Once I had that I  overwrote it with `print`, and then used `os.system` to cat the flag.
 ```python
-classes = 'a'.__class__.__base__.__subclasses__()
+classes = ''.__class__.__base__.__subclasses__()
 sys = classes[133].__init__.__globals__['sys']
 os = classes[94].__init__.__globals__['_os']
 
